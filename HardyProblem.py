@@ -1,5 +1,5 @@
 #This is a Monte Carlo simulation of the Hardy golf problem
-#with extensions 
+#with extensions (Python 3)
 import matplotlib.pyplot as plt
 import numpy 
 import random
@@ -105,26 +105,7 @@ def smart_rounds(prob,trials):
         rounds += [total]
     return rounds
 
-#Plotting scoring average as 2D histogram
-prob_vals = numpy.arange(0.005,0.501,0.005)
-num_trials = 1000000
-result = []
-probs = []
-for p in prob_vals:
-    #print(f'p = {p}')
-    result += smart_rounds(p,num_trials)
-    probs += [p]*num_trials
 
-plt.hist2d(probs,result, bins = [100,30], cmin=0.001, normed=True) 
-plt.xlabel('Probability $p$ of hitting an excellent or bad shot')
-plt.ylabel('Round Score')
-plt.title('Scoring vs Consistency')
-plt.colorbar()
-plt.savefig('HardyHistogram.jpg')
-plt.show()
-
-
-'''
 #Match play comparision with smart player
 win_probs = []
 loss_probs = []
@@ -143,7 +124,7 @@ plt.legend(loc=7)
 plt.title("Smart play against a player who makes all pars")
 
 plt.show()
-'''
+
 
 '''
 #Scoring average for smart player with various p values
