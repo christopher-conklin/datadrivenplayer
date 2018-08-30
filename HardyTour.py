@@ -330,21 +330,6 @@ player_totals.plot_money(purse=342)
 
 
 '''
-#Printing tournament results
-places = []
-cut = []
-money = []
-for player in t_res:
-    money += [(player['player'][0],player['payout'])]
-    if player['place']=='cut':
-        cut += [player['player'][0]]
-    else:
-        places += [(player['player'][0],player['place'])]
-
-plt.scatter(*zip(*money))
-plt.show()
-'''
-'''
 #Scoring average for smart player with various p values
 med = []
 top25 = []
