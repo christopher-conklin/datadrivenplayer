@@ -1,3 +1,4 @@
+#Chris Conklin 2018-08-30
 #This is a Monte Carlo simulation of the Hardy golf problem
 #with extensions for smart play and a tournament
 import matplotlib.pyplot as plt
